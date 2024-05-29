@@ -5,6 +5,7 @@ import {ClerkProvider} from "@clerk/nextjs";
 import {ThemeProvider} from "@/components/ThemeProvider";
 
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -21,14 +22,14 @@ export default function RootLayout({
         
       </head>
 
-        <body className={inter.className}>
+        <body className="min-h-screen bg-background text-foreground antialiased">
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-          
+        
           <ConvexClientProvider>{children}</ConvexClientProvider> </ThemeProvider>
         </body>
       </html>
