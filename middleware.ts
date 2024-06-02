@@ -6,7 +6,9 @@ import type { NextRequest } from 'next/server';
 const isProtectedRoute = createRouteMatcher([
   '/dashboard(.*)',
   '/forum(.*)',
-  '/AboutUs', // Add AboutUs route to the protected list
+  '/AboutUs',
+  '/Product'
+   // Add AboutUs route to the protected list
 ]);
 
 export default clerkMiddleware((auth, req) => {
