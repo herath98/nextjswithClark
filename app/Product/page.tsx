@@ -466,7 +466,7 @@ export default function Dashboard() {
                 </Label>
                 <Input
                   type="text"
-                  className="mt-1 block w-full p-2 text-black border border-gray-300 rounded-md"
+                  className="mt-1 block w-full p-2 text-gray-500 dark:text-white border border-gray-300 rounded-md"
                   placeholder="Product Name"
                   value={newProduct.name}
                   onChange={(e) =>
@@ -481,7 +481,7 @@ export default function Dashboard() {
                 </Label>
                 <Input
                   type="text"
-                  className="mt-1 block w-full p-2 text-black border border-gray-300 rounded-md"
+                  className="mt-1 block w-full p-2 text-gray-500 dark:text-white border border-gray-300 rounded-md"
                   placeholder="Price"
                   value={newProduct.price}
                   onChange={(e) =>
@@ -496,7 +496,7 @@ export default function Dashboard() {
                 </Label>
                 
                 <select
-                  className="mt-1 block w-full p-2  border  text-gray-400  bg-white  border-gray-300     dark:bg-background dark:border-white  rounded-md"
+                  className="mt-1 block w-full p-2  border  text-gray-500 dark:text-white bg-white  border-gray-300     dark:bg-background dark:border-white  rounded-md"
                   value={newProduct.status}
                   onChange={(e) =>
                     setNewProduct({ ...newProduct, status: e.target.value })
@@ -513,7 +513,7 @@ export default function Dashboard() {
                 </Label>
                 <Input
                   type="number"
-                  className="mt-1 block w-full p-2 text-black border border-gray-300 rounded-md"
+                  className="mt-1 block w-full p-2 text-gray-500 dark:text-white border border-gray-300 rounded-md"
                   placeholder="Total Sales"
                   value={newProduct.sales}
                   onChange={(e) =>

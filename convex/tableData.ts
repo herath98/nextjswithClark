@@ -9,3 +9,4 @@ export const getProducts = query(async ({ db }) => {
 export const addProduct = mutation(async ({ db }, { product }) => {
   return await db.insert("tableData", product);
 });
+
