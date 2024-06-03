@@ -1,0 +1,20 @@
+{"id":1,"name":"Laser Lemonade Machine","status":"Draft","price":"$499.99","sales":25,"createdAt":"2023-07-12 10:42 AM","image":"/placeholder.jpg"}
+{"id":2,"name":"Electric Blueberry Blender","status":"Active","price":"$299.99","sales":50,"createdAt":"2022-11-05 08:15 AM","image":"/blueberry_blender.jpg"}
+{"id":3,"name":"Solar-Powered Smoothie Maker","status":"Inactive","price":"$799.99","sales":15,"createdAt":"2024-02-20 03:30 PM","image":"/solar_smoothie_maker.png"}
+{"id":4,"name":"Raspberry Rhapsody Juicer","status":"Active","price":"$399.99","sales":40,"createdAt":"2023-10-10 11:20 AM","image":"/raspberry_juicer.jpg"}
+{"id":5,"name":"Mango Magic Mixer","status":"Draft","price":"$199.99","sales":10,"createdAt":"2024-04-28 02:55 PM","image":"/mango_mixer.png"}
+{"id":6,"name":"Tropical Twist Ice Cream Maker","status":"Active","price":"$599.99","sales":35,"createdAt":"2023-01-15 09:10 AM","image":"/tropical_ice_cream_maker.jpg"}
+{"id":7,"name":"Cherry Crush Cocktail Shaker","status":"Inactive","price":"$249.99","sales":20,"createdAt":"2022-08-30 04:45 PM","image":"/cherry_cocktail_shaker.jpg"}
+{"id":8,"name":"Grapefruit Gazpacho Soup Maker","status":"Active","price":"$349.99","sales":30,"createdAt":"2023-12-03 12:30 PM","image":"/grapefruit_soup_maker.png"}
+{"id":9,"name":"Watermelon Waffle Iron","status":"Draft","price":"$199.99","sales":15,"createdAt":"2024-05-18 06:20 AM","image":"/watermelon_waffle_iron.jpg"}
+{"id":10,"name":"Pineapple Pancake Press","status":"Active","price":"$159.99","sales":25,"createdAt":"2023-09-22 07:55 AM","image":"/pineapple_pancake_press.png"}
+{"id":11,"name":"Coconut Coffee Grinder","status":"Draft","price":"$79.99","sales":5,"createdAt":"2024-03-10 10:10 AM","image":"/coconut_coffee_grinder.jpg"}
+{"id":12,"name":"Banana Bread Baker","status":"Active","price":"$129.99","sales":20,"createdAt":"2022-06-18 03:25 PM","image":"/banana_bread_baker.png"}
+{"id":13,"name":"Orange Omelette Maker","status":"Inactive","price":"$89.99","sales":10,"createdAt":"2023-11-28 08:40 AM","image":"/orange_omelette_maker.jpg"}
+{"id":14,"name":"Apple Air Fryer","status":"Draft","price":"$199.99","sales":15,"createdAt":"2024-01-14 11:15 AM","image":"/apple_air_fryer.png"}
+{"id":15,"name":"Strawberry Salad Spinner","status":"Active","price":"$49.99","sales":10,"createdAt":"2023-07-29 09:50 AM","image":"/strawberry_salad_spinner.jpg"}
+{"id":16,"name":"Blueberry Bread Machine","status":"Inactive","price":"$199.99","sales":10,"createdAt":"2022-12-20 12:05 PM","image":"/blueberry_bread_machine.jpg"}
+{"id":17,"name":"Blackberry Blender","status":"Draft","price":"$79.99","sales":5,"createdAt":"2024-02-08 02:30 PM","image":"/blackberry_blender.png"}
+{"id":18,"name":"Peach Pie Press","status":"Active","price":"$149.99","sales":15,"createdAt":"2023-10-02 03:55 PM","image":"/peach_pie_press.jpg"}
+{"id":19,"name":"Plum Popsicle Maker","status":"Inactive","price":"$39.99","sales":5,"createdAt":"2022-09-15 06:20 PM","image":"/plum_popsicle_maker.png"}
+{"id":20,"name":"Apricot Air Purifier","status":"Draft","price":"$299.99","sales":20,"createdAt":"2024-04-01 09:35 AM","image":"/apricot_air_purifier.jpg"}

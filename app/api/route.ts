@@ -1,17 +1,12 @@
-import { auth } from '@clerk/nextjs/server';
-import { NextResponse } from 'next/server';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { convex } from '../../convex/_generated/client';
 
-export async function GET() {
-  const { userId } = auth();
-
-  if (!userId) {
-    return NextResponse.json(
-      { error: 'Error: No signed in user' },
-      { status: 401 },
-    );
+// Fetch products from Convex database
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const products = await convex.query('listProducts')();
+    res.status(200).json(products);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch products' });
   }
-
-  // Add your Route Handler logic here
-
-  return NextResponse.json({ userId });
 }
