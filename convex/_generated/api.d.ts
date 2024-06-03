@@ -17,6 +17,8 @@ import type {
 import type * as functions_addProduct from "../functions/addProduct.js";
 import type * as functions from "../functions.js";
 import type * as images from "../images.js";
+import type * as listMessages from "../listMessages.js";
+import type * as messages from "../messages.js";
 import type * as tableData from "../tableData.js";
 
 /**
@@ -31,6 +33,8 @@ declare const fullApi: ApiFromModules<{
   "functions/addProduct": typeof functions_addProduct;
   functions: typeof functions;
   images: typeof images;
+  listMessages: typeof listMessages;
+  messages: typeof messages;
   tableData: typeof tableData;
 }>;
 export declare const api: FilterApi<
