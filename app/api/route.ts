@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { convex } from '../../convex/_generated/client';
+
 
 // Fetch products from Convex database
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
