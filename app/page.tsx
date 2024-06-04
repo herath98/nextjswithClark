@@ -79,6 +79,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   CreateOrganization,
+  OrganizationSwitcher,
   RedirectToUserProfile,
   SignInButton,
   SignedIn,
@@ -287,9 +288,8 @@ export default function Page() {
                   className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
                 />
               </div>
-              <Link href="/create-organization">
-                <Button>Create Organization</Button>
-              </Link>
+             
+              <OrganizationSwitcher />
               <UserButton />
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
