@@ -77,7 +77,14 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import {
+  CreateOrganization,
+  RedirectToUserProfile,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 import {
   VictoryBar,
   VictoryChart,
@@ -88,11 +95,11 @@ import {
   VictoryArea,
   VictoryLine,
 } from "victory";
-import { Dropdown } from "flowbite-react";
+import { Dropdown,Modal } from "flowbite-react";
 
 export default function Page() {
   const { setTheme } = useTheme();
-
+  const [openModal, setOpenModal] = useState(true);
   const data = [
     { quarter: 1, earnings: 13000 },
     { quarter: 2, earnings: 16500 },
@@ -139,6 +146,7 @@ export default function Page() {
               <Button>
                 <SignInButton mode="modal" />
               </Button>
+             
             </div>
           </div>
         </div>
@@ -148,7 +156,7 @@ export default function Page() {
           <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
             <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
               <Link
-                href="#"
+                href="/"
                 className="group flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
               >
                 <Home className="h-5 w-5" />
@@ -158,7 +166,7 @@ export default function Page() {
                 </Card>
               </Link>
               <Link
-                href="#"
+                href="/Order"
                 className="group flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
               >
                 <ShoppingCart className="h-5 w-5" />
@@ -168,7 +176,7 @@ export default function Page() {
                 </Card>
               </Link>
               <Link
-                href="#"
+                href="/Product"
                 className="group flex h-9 w-9 items-center justify-center bg-primary rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
               >
                 <Package className="h-5 w-5" />
@@ -178,7 +186,7 @@ export default function Page() {
                 </Card>
               </Link>
               <Link
-                href="#"
+                href="Customer"
                 className="group flex h-9 w-9 items-center justify-center bg-primary rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
               >
                 <Users2 className="h-5 w-5" />
@@ -279,6 +287,9 @@ export default function Page() {
                   className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
                 />
               </div>
+              <Link href="/create-organization">
+                <Button>Create Organization</Button>
+              </Link>
               <UserButton />
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>

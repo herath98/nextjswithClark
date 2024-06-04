@@ -70,7 +70,7 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
-import { ClerkLoading, UserButton } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { Label, Modal } from "flowbite-react";
@@ -79,8 +79,8 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 export default function Dashboard() {
   const [openModal, setttOpenModal] = useState(false);
   const { setTheme } = useTheme();
-  const products = useQuery(api.tableData.getProducts);
-  const addProduct = useMutation(api.tableData.addProduct);
+  const products = useQuery(api.Customer.getProducts);
+  const addProduct = useMutation(api.Customer.addProduct);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [filter, setFilter] = useState("all");
@@ -90,7 +90,7 @@ export default function Dashboard() {
     price: "",
     sales: 0,
     createdAt: new Date().toISOString(),
-    image: "/placeholder.svg",
+    
   });
 
   const handleAddProduct = async (event) => {
@@ -102,7 +102,7 @@ export default function Dashboard() {
       price: "",
       sales: 0,
       createdAt: new Date().toISOString(),
-      image: "/placeholder.svg",
+      
     });
     setIsModalOpen(false);
   };
@@ -136,7 +136,7 @@ export default function Dashboard() {
       body: tableRows,
     });
 
-    doc.save("products.pdf");
+    doc.save("Costomer.pdf");
   };
 
   if (!products) {
@@ -161,7 +161,6 @@ export default function Dashboard() {
           </svg>
           <span className="sr-only">Loading...</span>
         </div>
-       
       </div>
     );
   }
@@ -175,7 +174,7 @@ export default function Dashboard() {
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
         <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
           <Link
-            href="/"
+            href="#"
             className="group z-50 flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
           >
             <Home className="h-5 w-5" />
@@ -185,7 +184,7 @@ export default function Dashboard() {
             </Card>
           </Link>
           <Link
-            href="/Order"
+            href="#"
             className="group flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
           >
             <ShoppingCart className="h-5 w-5" />
@@ -195,8 +194,8 @@ export default function Dashboard() {
             </Card>
           </Link>
           <Link
-            href="/Product"
-            className="group flex h-9 w-9 items-center justify-center bg-accent rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
+            href="#"
+            className="group flex h-9 w-9 items-center justify-center bg-primary  rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
           >
             <Package className="h-5 w-5" />
             <span className="sr-only">Products</span>
@@ -205,8 +204,8 @@ export default function Dashboard() {
             </Card>
           </Link>
           <Link
-            href="/Customer"
-            className="group flex h-9 w-9 items-center justify-center bg-primary rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
+            href="#"
+            className="group flex h-9 w-9 items-center justify-center bg-accent rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
           >
             <Users2 className="h-5 w-5" />
             <span className="sr-only">Customers</span>
@@ -353,8 +352,8 @@ export default function Dashboard() {
                   </TabsTrigger>
                   <TabsTrigger
                     value="active"
-                    checked={filter === "Active"}
-                    onCheckedChange={() => setFilter("Active")}
+                    checked={filter === "all"}
+                    onCheckedChange={() => setFilter("all")}
                   >
                     Active
                   </TabsTrigger>
@@ -424,7 +423,7 @@ export default function Dashboard() {
                   >
                     <PlusCircle className="h-3.5 w-3.5" />
                     <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                      Add Product
+                      Add Customer
                     </span>
                   </Button>
                 </div>
@@ -432,28 +431,26 @@ export default function Dashboard() {
               <TabsContent value="all">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Products</CardTitle>
+                    <CardTitle>Customer Management</CardTitle>
                     <CardDescription>
-                      Manage your products and view their sales performance.
+                      Manage your Customers and view their sales performance.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="hidden w-[100px] sm:table-cell">
-                            <span className="sr-only">Image</span>
-                          </TableHead>
+                        
                           <TableHead>Name</TableHead>
                           <TableHead>Status</TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Price
+                            Total Price
                           </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Total Sales
+                            Buying Item
                           </TableHead>
                           <TableHead className="hidden md:table-cell">
-                            Created at
+                            Joined Date
                           </TableHead>
                           <TableHead>
                             <span className="sr-only">Actions</span>
@@ -463,15 +460,7 @@ export default function Dashboard() {
                       <TableBody>
                         {filteredProducts.map((product) => (
                           <TableRow key={product._id}>
-                            <TableCell className="hidden sm:table-cell">
-                              <Image
-                                alt="Product image"
-                                className="aspect-square rounded-md object-cover"
-                                height="64"
-                                src={product.image}
-                                width="64"
-                              />
-                            </TableCell>
+                           
                             <TableCell className="font-medium">
                               {product.name}
                             </TableCell>

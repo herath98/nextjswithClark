@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import ConvexClientProvider from "./ConvexClientProvider";
-import { ClerkProvider, SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
+import { ClerkLoaded, ClerkLoading, ClerkProvider, SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Button } from "@/components/ui/button";
 
@@ -24,16 +24,19 @@ export default function RootLayout({
         </head>
 
         <body className=" bg-background text-foreground antialiased">
+       
+     
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-      
+          
            
             <ConvexClientProvider>{children}</ConvexClientProvider>{" "}
           </ThemeProvider>
+         
         </body>
       </html>
     </ClerkProvider>
