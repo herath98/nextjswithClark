@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Input, Form, notification } from 'antd';
+import { Select } from 'antd';
 
 const AddProductModal = ({ isVisible, onClose, onAddProduct }) => {
   const [form] = Form.useForm();

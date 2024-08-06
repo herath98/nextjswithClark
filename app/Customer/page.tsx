@@ -172,58 +172,58 @@ export default function Dashboard() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
-        <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
-          <Link
-            href="#"
-            className="group z-50 flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
-          >
-            <Home className="h-5 w-5" />
-            <span className="sr-only">Dashboard</span>
-            <Card className="absolute z-50  left-12 hidden group-hover:block  text-xs rounded p-1">
-              Dashboard
-            </Card>
-          </Link>
-          <Link
-            href="#"
-            className="group flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
-          >
-            <ShoppingCart className="h-5 w-5" />
-            <span className="sr-only">Orders</span>
-            <Card className="absolute left-12 hidden group-hover:block  text-xs rounded p-1">
-              Orders
-            </Card>
-          </Link>
-          <Link
-            href="#"
-            className="group flex h-9 w-9 items-center justify-center bg-primary  rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
-          >
-            <Package className="h-5 w-5" />
-            <span className="sr-only">Products</span>
-            <Card className="absolute left-12 hidden group-hover:block text-xs rounded p-1">
-              Products
-            </Card>
-          </Link>
-          <Link
-            href="#"
-            className="group flex h-9 w-9 items-center justify-center bg-accent rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
-          >
-            <Users2 className="h-5 w-5" />
-            <span className="sr-only">Customers</span>
-            <Card className="absolute left-12 hidden group-hover:block  text-xs rounded p-1">
-              Customers
-            </Card>
-          </Link>
-          <Link
-            href="#"
-            className="group flex h-9 w-9 items-center justify-center bg-primary rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
-          >
-            <LineChart className="h-5 w-5" />
-            <span className="sr-only">Analytics</span>
-            <Card className="absolute group-hover:block left-12 hidden text-xs rounded p-1">
-              Analytics
-            </Card>
-          </Link>
-        </nav>
+      <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
+              <Link
+                href="/"
+                className="group flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
+              >
+                <Home className="h-5 w-5" />
+                <span className="sr-only">Dashboard</span>
+                <Card className="absolute left-12 hidden group-hover:block  text-xs rounded p-1">
+                  Dashboard
+                </Card>
+              </Link>
+              <Link
+                href="/Order"
+                className="group flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
+              >
+                <ShoppingCart className="h-5 w-5" />
+                <span className="sr-only">Orders</span>
+                <Card className="absolute left-12 hidden group-hover:block  text-xs rounded p-1">
+                  Orders
+                </Card>
+              </Link>
+              <Link
+                href="/Product"
+                className="group flex h-9 w-9 items-center justify-center bg-primary rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
+              >
+                <Package className="h-5 w-5" />
+                <span className="sr-only">Products</span>
+                <Card className="absolute left-12 hidden group-hover:block text-xs rounded p-1">
+                  Products
+                </Card>
+              </Link>
+              <Link
+                href="/Customer"
+                className="group flex h-9 w-9 items-center justify-center  rounded-lg bg-accent text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
+              >
+                <Users2 className="h-5 w-5" />
+                <span className="sr-only">Customers</span>
+                <Card className="absolute left-12 hidden group-hover:block  text-xs rounded p-1">
+                  Customers
+                </Card>
+              </Link>
+              <Link
+                href="#"
+                className="group flex h-9 w-9 items-center justify-center bg-primary rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8 relative"
+              >
+                <LineChart className="h-5 w-5" />
+                <span className="sr-only">Analytics</span>
+                <Card className="absolute group-hover:block left-12 hidden text-xs rounded p-1">
+                  Analytics
+                </Card>
+              </Link>
+            </nav>
         <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
           <Link
             href="#"
@@ -247,50 +247,43 @@ export default function Dashboard() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="sm:max-w-xs">
-              <nav className="grid gap-6 text-lg font-medium">
-                <Link
-                  href="#"
-                  className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base"
-                >
-                  <Package2 className="h-5 w-5 transition-all group-hover:scale-110" />
-                  <span className="sr-only">Acme Inc</span>
-                </Link>
-                <Link
-                  href="#"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
-                >
-                  <Home className="h-5 w-5" />
-                  Dashboard
-                </Link>
-                <Link
-                  href="#"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
-                >
-                  <ShoppingCart className="h-5 w-5" />
-                  Orders
-                </Link>
-                <Link
-                  href="#"
-                  className="flex items-center gap-4 px-2.5 text-foreground"
-                >
-                  <Package className="h-5 w-5" />
-                  Products
-                </Link>
-                <Link
-                  href="#"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
-                >
-                  <Users2 className="h-5 w-5" />
-                  Customers
-                </Link>
-                <Link
-                  href="#"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
-                >
-                  <LineChart className="h-5 w-5" />
-                  Settings
-                </Link>
-              </nav>
+            <nav className="grid gap-6 text-lg font-medium">
+                    <Link
+                      href="/"
+                      className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                    >
+                      <Home className="h-5 w-5" />
+                      Dashboard
+                    </Link>
+                    <Link
+                      href="/Order"
+                      className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                    >
+                      <ShoppingCart className="h-5 w-5" />
+                      Orders
+                    </Link>
+                    <Link
+                      href="/Product"
+                      className="flex items-center gap-4 px-2.5 text-foreground"
+                    >
+                      <Package className="h-5 w-5" />
+                      Products
+                    </Link>
+                    <Link
+                      href="/Customer"
+                      className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                    >
+                      <Users2 className="h-5 w-5" />
+                      Customers
+                    </Link>
+                    <Link
+                      href="#"
+                      className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                    >
+                      <LineChart className="h-5 w-5" />
+                      Settings
+                    </Link>
+                  </nav>
             </SheetContent>
           </Sheet>
           <Breadcrumb className="hidden md:flex">
